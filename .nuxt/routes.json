@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Alliances___en",
+    "path": "/Alliances",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Alliances.vue",
+    "chunkName": "pages/Alliances",
+    "_name": "_b6701d56"
+  },
+  {
+    "name": "Conduct-Code___en",
+    "path": "/Conduct-Code",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Conduct-Code.vue",
+    "chunkName": "pages/Conduct-Code",
+    "_name": "_7df1af4d"
+  },
+  {
+    "name": "Empodera___en",
+    "path": "/Empodera",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Empodera.vue",
+    "chunkName": "pages/Empodera",
+    "_name": "_2e374cee"
+  },
+  {
+    "name": "Events___en",
+    "path": "/Events",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Events.vue",
+    "chunkName": "pages/Events",
+    "_name": "_484f85a0"
+  },
+  {
+    "name": "History___en",
+    "path": "/History",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\History.vue",
+    "chunkName": "pages/History",
+    "_name": "_7af40f0d"
+  },
+  {
+    "name": "Incentiva___en",
+    "path": "/Incentiva",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Incentiva.vue",
+    "chunkName": "pages/Incentiva",
+    "_name": "_6b3e3220"
+  },
+  {
+    "name": "Inspira___en",
+    "path": "/Inspira",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Inspira.vue",
+    "chunkName": "pages/Inspira",
+    "_name": "_11e8a762"
+  },
+  {
+    "name": "Potencia___en",
+    "path": "/Potencia",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Potencia.vue",
+    "chunkName": "pages/Potencia",
+    "_name": "_48bfe894"
+  },
+  {
+    "name": "Projects___en",
+    "path": "/Projects",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Projects.vue",
+    "chunkName": "pages/Projects",
+    "_name": "_d7a54f5e"
+  },
+  {
+    "name": "index___ro",
+    "path": "/ro",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_5d85e8ab"
+  },
+  {
+    "name": "UndCons___en",
+    "path": "/UndCons",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\UndCons.vue",
+    "chunkName": "pages/UndCons",
+    "_name": "_36bc5135"
+  },
+  {
+    "name": "Volunteer___en",
+    "path": "/Volunteer",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Volunteer.vue",
+    "chunkName": "pages/Volunteer",
+    "_name": "_208cc6c3"
+  },
+  {
+    "name": "Alliances___ro",
+    "path": "/ro/Alliances",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Alliances.vue",
+    "chunkName": "pages/Alliances",
+    "_name": "_b6701d56"
+  },
+  {
+    "name": "Conduct-Code___ro",
+    "path": "/ro/Conduct-Code",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Conduct-Code.vue",
+    "chunkName": "pages/Conduct-Code",
+    "_name": "_7df1af4d"
+  },
+  {
+    "name": "Empodera___ro",
+    "path": "/ro/Empodera",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Empodera.vue",
+    "chunkName": "pages/Empodera",
+    "_name": "_2e374cee"
+  },
+  {
+    "name": "Events___ro",
+    "path": "/ro/Events",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Events.vue",
+    "chunkName": "pages/Events",
+    "_name": "_484f85a0"
+  },
+  {
+    "name": "History___ro",
+    "path": "/ro/History",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\History.vue",
+    "chunkName": "pages/History",
+    "_name": "_7af40f0d"
+  },
+  {
+    "name": "Incentiva___ro",
+    "path": "/ro/Incentiva",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Incentiva.vue",
+    "chunkName": "pages/Incentiva",
+    "_name": "_6b3e3220"
+  },
+  {
+    "name": "Inspira___ro",
+    "path": "/ro/Inspira",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Inspira.vue",
+    "chunkName": "pages/Inspira",
+    "_name": "_11e8a762"
+  },
+  {
+    "name": "Potencia___ro",
+    "path": "/ro/Potencia",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Potencia.vue",
+    "chunkName": "pages/Potencia",
+    "_name": "_48bfe894"
+  },
+  {
+    "name": "Projects___ro",
+    "path": "/ro/Projects",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Projects.vue",
+    "chunkName": "pages/Projects",
+    "_name": "_d7a54f5e"
+  },
+  {
+    "name": "UndCons___ro",
+    "path": "/ro/UndCons",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\UndCons.vue",
+    "chunkName": "pages/UndCons",
+    "_name": "_36bc5135"
+  },
+  {
+    "name": "Volunteer___ro",
+    "path": "/ro/Volunteer",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\Volunteer.vue",
+    "chunkName": "pages/Volunteer",
+    "_name": "_208cc6c3"
+  },
+  {
+    "name": "index___en",
+    "path": "/",
+    "component": "C:\\\\Users\\\\marius_\\\\Documents\\\\ninaspro\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_5d85e8ab"
+  }
+]
