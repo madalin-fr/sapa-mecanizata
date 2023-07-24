@@ -17,6 +17,10 @@ export default {
         '@/assets/main.scss',
         '@fortawesome/fontawesome-svg-core/styles.css',
     ],
+    server: {
+        host: '0.0.0.0',
+        port: process.env.PORT || 3000,
+    },
     plugins: [
         {src: '~/plugins/aos.js', mode: 'client'},
         {src: '~/plugins/buefy.js'},
