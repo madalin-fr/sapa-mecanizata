@@ -8,7 +8,7 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Banner>` | `<banner>` (components/Banner.vue)
 - `<Carrousel>` | `<carrousel>` (components/Carrousel.vue)
-- `<Collaborators>` | `<collaborators>` (components/Collaborators.vue)
+- `<Contributors>` | `<contributors>` (components/Contributors.vue)
 - `<Event>` | `<event>` (components/Event.vue)
 - `<EventHome>` | `<event-home>` (components/EventHome.vue)
 - `<Footer>` | `<footer>` (components/Footer.vue)

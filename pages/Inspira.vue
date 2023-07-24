@@ -19,7 +19,7 @@
           </article>
           <article class="tile is-child">
             <figure class="image is-4by4">
-              <img src="@/assets/initiatives/square-winners.png">
+              <img src="~/assets/initiatives/square-winners.png">
             </figure>
           </article>
         </div>
@@ -27,7 +27,7 @@
           <div class="tile is-parent">
             <article class="tile is-child">
               <figure class="image is-4by4">
-                <img src="@/assets/initiatives/portrait-zoom.png">
+                <img src="~/assets/initiatives/portrait-zoom.png">
               </figure>
             </article>
           </div>
@@ -81,7 +81,7 @@
         <div class="tile is-parent">
           <article class="tile is-child">
             <figure class="image">
-              <img src="@/assets/initiatives/portrait-group.png">
+              <img src="~/assets/initiatives/portrait-group.png">
             </figure>
           </article>
         </div>
@@ -94,6 +94,7 @@
 
 <script>
 import Banner from "~/components/Banner.vue";
+
 
 export default {
   name: "Inspira",
@@ -114,7 +115,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
-
 
 .container {
   padding: 3rem 0;

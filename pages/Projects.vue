@@ -53,7 +53,7 @@
         en donde las niñas desarrollan
         habilidades del pensamiento computacional y de resolución de problemas.
         Este curso de 18 sesiones también busca potenciar habilidades socioemocionales
-        como la autoconfianza, la tolerancia a la frustración y la colaboración.
+        como la autoconfianza, la tolerancia a la frustración y la contributor.
       </div>
     </div>
     <PhotoBanner :type="type" title="Proyecto Potencia" image="mentoria.jpg"/>
@@ -93,7 +93,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
-
 
 .description {
   min-height: 500px;

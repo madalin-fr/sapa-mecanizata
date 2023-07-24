@@ -39,7 +39,7 @@
           <div class="tile is-parent">
             <article class="tile is-child">
               <figure class="image is-4by4">
-                <img src="@/assets/initiatives/portrait-charlas.png">
+                <img src="~/assets/initiatives/portrait-charlas.png">
               </figure>
             </article>
           </div>
@@ -47,7 +47,7 @@
         <div class="tile is-parent is-vertical is-4">
           <article class="tile is-child">
             <figure class="image is-4by4">
-              <img src="@/assets/initiatives/square-inspired.png">
+              <img src="~/assets/initiatives/square-inspired.png">
             </figure>
           </article>
           <article class="tile is-child notification is-success">
@@ -88,7 +88,7 @@
         <div class="tile is-parent">
           <div class="tile is-child">
            <figure class="image is-4by4">
-              <img src="@/assets/initiatives/portrait-django.png">
+              <img src="~/assets/initiatives/portrait-django.png">
             </figure>
           </div>
         </div>
@@ -121,7 +121,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
-
 
 .container {
   padding: 3rem 0;

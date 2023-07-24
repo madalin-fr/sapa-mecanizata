@@ -8,7 +8,7 @@
         <div class="tile is-parent is-4">
           <div class="tile is-child">
             <figure class="image is-1by1">
-              <img src="@/assets/empower.jpg" alt="Sororidad y Colaboración">
+              <img src="~/assets/empower.jpg" alt="Sororidad y contributorr">
             </figure>
           </div>
         </div>

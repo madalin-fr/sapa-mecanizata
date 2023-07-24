@@ -8,7 +8,7 @@
       "events":"Events",
       "about":"About Us",
       "history": "History",
-      "alliances": "Alliances",
+      "alliance": "alliance",
       "involved": "Get involved",
       "donate":"Donate",
       "lang":"Language"
@@ -26,7 +26,7 @@
     "inspire":"Inspires",
     "boost":"Boost",
     "help":"How to help?",
-    "alliances":"Alliances",
+    "terms":"terms and conditions",
     "volunteer":"Volunteering",
     "donate":"Donation",
     "contact":"Contact Us",
@@ -39,7 +39,7 @@
     "subtitleEvents":"All of our events are free, check the requirements and sign up!",
     "titleMetrics":"Some Numbers",
     "titlePartners": "Our Partners",
-    "subtitlePartners":"We thank the companies, institutions and organizations that trust us and help us reach more girls every year.",
+    "subtitlePartners":"We express our sincere gratitude to the companies, institutions, and organizations that rely on our mechanized screed services. Your trust enables us to continuously improve our services and reach more clients each year.",
     "buttonPartnersMail": "I want to support!",
     "buttonPartnersAll": "See the complete list",
     "titleNews":"News",
@@ -71,7 +71,7 @@
     "titleTestimony":"Testimonies",
     "subtitleTestimony":"Look what our volunteers are saying about the experience",
     "titleSignup":"Join the team!",
-    "subtitleSignup":"Complete the form to init the proccess."  
+    "subtitleSignup":"Complete the form to init the proccess."
   },
   "inspire":{
     "banner":"Competitive Programming",

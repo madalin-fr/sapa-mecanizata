@@ -1,24 +1,24 @@
-export const Banner = () => import('../..\\components\\Banner.vue' /* webpackChunkName: "components/banner" */).then(c => wrapFunctional(c.default || c))
-export const Carrousel = () => import('../..\\components\\Carrousel.vue' /* webpackChunkName: "components/carrousel" */).then(c => wrapFunctional(c.default || c))
-export const Collaborators = () => import('../..\\components\\Collaborators.vue' /* webpackChunkName: "components/collaborators" */).then(c => wrapFunctional(c.default || c))
-export const Event = () => import('../..\\components\\Event.vue' /* webpackChunkName: "components/event" */).then(c => wrapFunctional(c.default || c))
-export const EventHome = () => import('../..\\components\\EventHome.vue' /* webpackChunkName: "components/event-home" */).then(c => wrapFunctional(c.default || c))
-export const Footer = () => import('../..\\components\\Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
-export const ImageButton = () => import('../..\\components\\ImageButton.vue' /* webpackChunkName: "components/image-button" */).then(c => wrapFunctional(c.default || c))
-export const Information = () => import('../..\\components\\Information.vue' /* webpackChunkName: "components/information" */).then(c => wrapFunctional(c.default || c))
-export const ListOfItems = () => import('../..\\components\\ListOfItems.vue' /* webpackChunkName: "components/list-of-items" */).then(c => wrapFunctional(c.default || c))
-export const Memories = () => import('../..\\components\\Memories.vue' /* webpackChunkName: "components/memories" */).then(c => wrapFunctional(c.default || c))
-export const Navbar = () => import('../..\\components\\Navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => wrapFunctional(c.default || c))
-export const News = () => import('../..\\components\\News.vue' /* webpackChunkName: "components/news" */).then(c => wrapFunctional(c.default || c))
-export const PhotoBanner = () => import('../..\\components\\PhotoBanner.vue' /* webpackChunkName: "components/photo-banner" */).then(c => wrapFunctional(c.default || c))
-export const ProjectsHome = () => import('../..\\components\\ProjectsHome.vue' /* webpackChunkName: "components/projects-home" */).then(c => wrapFunctional(c.default || c))
-export const ProjectsVolunteer = () => import('../..\\components\\ProjectsVolunteer.vue' /* webpackChunkName: "components/projects-volunteer" */).then(c => wrapFunctional(c.default || c))
-export const SocialNetworkButton = () => import('../..\\components\\SocialNetworkButton.vue' /* webpackChunkName: "components/social-network-button" */).then(c => wrapFunctional(c.default || c))
-export const Team = () => import('../..\\components\\Team.vue' /* webpackChunkName: "components/team" */).then(c => wrapFunctional(c.default || c))
-export const Testimony = () => import('../..\\components\\Testimony.vue' /* webpackChunkName: "components/testimony" */).then(c => wrapFunctional(c.default || c))
-export const Timeline = () => import('../..\\components\\Timeline.vue' /* webpackChunkName: "components/timeline" */).then(c => wrapFunctional(c.default || c))
-export const VolunteerDo = () => import('../..\\components\\VolunteerDo.vue' /* webpackChunkName: "components/volunteer-do" */).then(c => wrapFunctional(c.default || c))
-export const VolunteerProfile = () => import('../..\\components\\VolunteerProfile.vue' /* webpackChunkName: "components/volunteer-profile" */).then(c => wrapFunctional(c.default || c))
+export { default as Banner } from '../..\\components\\Banner.vue'
+export { default as Carrousel } from '../..\\components\\Carrousel.vue'
+export { default as Contributors } from '../..\\components\\Contributors.vue'
+export { default as Event } from '../..\\components\\Event.vue'
+export { default as EventHome } from '../..\\components\\EventHome.vue'
+export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as ImageButton } from '../..\\components\\ImageButton.vue'
+export { default as Information } from '../..\\components\\Information.vue'
+export { default as ListOfItems } from '../..\\components\\ListOfItems.vue'
+export { default as Memories } from '../..\\components\\Memories.vue'
+export { default as Navbar } from '../..\\components\\Navbar.vue'
+export { default as News } from '../..\\components\\News.vue'
+export { default as PhotoBanner } from '../..\\components\\PhotoBanner.vue'
+export { default as ProjectsHome } from '../..\\components\\ProjectsHome.vue'
+export { default as ProjectsVolunteer } from '../..\\components\\ProjectsVolunteer.vue'
+export { default as SocialNetworkButton } from '../..\\components\\SocialNetworkButton.vue'
+export { default as Team } from '../..\\components\\Team.vue'
+export { default as Testimony } from '../..\\components\\Testimony.vue'
+export { default as Timeline } from '../..\\components\\Timeline.vue'
+export { default as VolunteerDo } from '../..\\components\\VolunteerDo.vue'
+export { default as VolunteerProfile } from '../..\\components\\VolunteerProfile.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

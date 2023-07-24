@@ -16,7 +16,7 @@
         </div>
         <div class="tile is-parent">
           <figure class="image is-4by4">
-              <img src="@/assets/initiatives/square-presenting.png">
+              <img src="~/assets/initiatives/square-presenting.png">
             </figure>
         </div>
         <div class="tile is-parent">
@@ -89,7 +89,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
-
 
 .container {
   padding: 3rem 0;

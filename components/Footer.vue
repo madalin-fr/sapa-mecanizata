@@ -1,22 +1,14 @@
 <template>
   <footer :class="`hero is-medium ${type}`">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-2" >
+    <div class="container has-text-centered">
+      <div class="columns is-multiline">
+        <div class="column is-12-mobile is-2-tablet" >
           <a href="/">
-            <img class="logo" src="@/assets/logo.png" alt="Corporación Niñas Pro" width="100" height="100" >
+            <img class="logo" src="~/assets/logo.png" alt="Corporación Niñas Pro" width="100" height="100" >
           </a>
         </div>
-        <div class="column is-2">
-          <strong >{{$t('footer.project')}}</strong>
-          <ul>
-            <li><nuxt-link class="footer-link" to="/inspira/">{{$t('footer.inspire')}}</nuxt-link></li>
-            <li><nuxt-link class="footer-link" to="/incentiva/">{{$t('footer.incentive')}}</nuxt-link></li>
-            <li><nuxt-link class="footer-link" to="/empodera/">{{$t('footer.empower')}}</nuxt-link></li>
-            <li><nuxt-link class="footer-link" to="/potencia/">{{$t('footer.boost')}}</nuxt-link></li>
-          </ul>
-        </div>
-        <div class="column is-2">
+
+        <div class="column is-12-mobile is-3-tablet">
           <strong >{{$t('footer.about')}}</strong>
           <ul>
             <li><nuxt-link class="footer-link" to="/history">{{$t('footer.purpose')}}</nuxt-link></li>
@@ -26,18 +18,18 @@
             <li><nuxt-link class="footer-link" to="/conduct-code">{{$t('pages.conductcode')}}</nuxt-link></li>
           </ul>
         </div>
-        <div class="column is-2">
+        <div class="column is-12-mobile is-3-tablet">
           <strong >{{$t('footer.help')}}</strong>
           <ul>
-            <li><nuxt-link class="footer-link" to="/Alliances/">{{$t('footer.alliances')}}</nuxt-link></li>
+            <li><nuxt-link class="footer-link" to="/Alliances/">{{$t('footer.terms')}}</nuxt-link></li>
             <li><nuxt-link class="footer-link" to="/volunteer/">{{$t('footer.volunteer')}}</nuxt-link></li>
             <li><a class="footer-link" href="https://yodono.cl/institucion/546/ninas_pro">{{$t('footer.donate')}}</a></li>
           </ul>
         </div>
-        <div class="column is-3 is-offset-1">
+        <div class="column is-12-mobile is-3-tablet">
           <div class="contactus">
             <strong>{{$t('footer.contact')}}</strong> <br>
-            <a href="mailto:contacto@ninaspro.cl">contacto@ninaspro.cl</a>
+            <a href="mailto:sapa-mecanizata@gmail.com">sapa-mecanizata@gmail.com</a>
           </div>
           <div class="rrss">
             <strong>{{$t('footer.rrss')}}</strong>
@@ -77,12 +69,13 @@ export default {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    width: 100%;
   }
   strong {
     color: white;
   }
   .container {
-    width: 1080px;
   }
   .column {
     text-align: left;
@@ -98,11 +91,11 @@ export default {
     margin-bottom: 15px;
   }
 
-@media only screen and (max-device-width: 1220px) {
+@media only screen and (max-device-width: 775px) {
 
-  .container {
-    width: 100%;
-    padding: 2rem 20%;
+  .column {
+    text-align: center;
+    width: auto;
   }
 
 }

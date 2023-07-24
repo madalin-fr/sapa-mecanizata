@@ -1,6 +1,6 @@
 <template>
 
-    <div class="tile is-ancestor"> 
+    <div class="tile is-ancestor">
         <!-- All other tile elements -->
         <div class="tile is-1 is-parent category">
             <article :class="`tile is-child notification ${type}`">
@@ -13,9 +13,9 @@
             </article>
             <div class="tile is-child columns is-multiline is-mobile is-centered">
                 <div :class="{
-                    'column':true, 
-                    'is-4-desktop is-12-mobile': detailed, 
-                    'is-3-desktop is-6-mobile': !detailed}" 
+                    'column':true,
+                    'is-4-desktop is-12-mobile': detailed,
+                    'is-3-desktop is-6-mobile': !detailed}"
                     v-for="(item, i) in data" :key="i"
                 >
                     <article class="box">
@@ -41,7 +41,7 @@ export default {
     },
     methods: {
         getImgUrl(value) {
-            return require(`@/assets/${value}`)
+            return require(`~/assets/${value}`)
     }
   },
 }

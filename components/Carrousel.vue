@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     getImgUrl(value) {
-      return require(`@/assets/${value}`)
+      return require(`~/assets/${value}`)
     }
   },
   computed:

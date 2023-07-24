@@ -119,7 +119,6 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 
-
 .formal-text {
 
     padding-top: 2rem;

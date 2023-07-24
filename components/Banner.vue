@@ -37,9 +37,9 @@ export default {
   methods: {
     getColouredSymbolUrl(type) {
       if(type === "is-primary" || type === "is-warning")
-          return require(`@/assets/estrella-rosada.png`);
+          return require(`~/assets/estrella-rosada.png`);
       else
-          return require(`@/assets/estrella-amarilla.png`);
+          return require(`~/assets/estrella-amarilla.png`);
     }
   },
   computed: {

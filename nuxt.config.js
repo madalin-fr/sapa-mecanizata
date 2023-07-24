@@ -1,6 +1,6 @@
 export default {
     head: {
-        title: 'Your Project Title',
+        title: 'Șapă mecanizată',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,7 +24,6 @@ export default {
         {src:'~/plugins/vue2-smooth-scroll.js'},
         {src:'~/plugins/vue-timeline.js'},
     ],
-    components: true,
     buildModules: [],
     modules:[
         '@nuxtjs/i18n',
@@ -36,11 +35,16 @@ export default {
     },
     build: {
 
+
     },
+    components: true,
     i18n: {
-        defaultLocale: 'en',
-        fallbackLocale: 'en',
+        defaultLocale: 'ro',
+        fallbackLocale: 'ro',
         langDir: 'locales',
+        strategy: 'prefix_except_default',
+        lazy: true,
+        vueI18nLoader: false,
         locales: [
             {
                 code: 'en',

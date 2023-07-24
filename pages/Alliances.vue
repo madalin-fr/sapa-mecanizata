@@ -1,19 +1,19 @@
 <template>
     <div id="event">
         <Banner :type="type" :title="`${$t('navbar.alliances')}`" :button="`También quiero Apoyar`" link="mailto:recaudacion@ninaspro.cl?subject=Me gustaría colaborar con Niñas Pro" />
-        <collaborators />
+        <contributors />
     </div>
 </template>
 
 <script>
 import Banner from "~/components/Banner.vue";
-import Collaborators from "~/components/Collaborators.vue";
+import Contributors from "~/components/Contributors.vue";
 
 export default {
   name: "Alliances",
   components: {
       Banner,
-      Collaborators
+      Contributors
   },
   props: {
     type: {

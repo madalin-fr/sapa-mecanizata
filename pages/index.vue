@@ -49,26 +49,25 @@
       </div>
     </section>
 
-    <!--Collaborators and partners -->
-    <section id="collaborators">
+    <!--Contributors and partners -->
+    <section id="contributors">
       <div class="container" data-aos="fade-up" data-aos-delay="200">
         <h1 class="title"> {{$t('home.titlePartners')}} </h1>
         <p class="subtitle">{{$t('home.subtitlePartners')}} </p>
         <div class="buttons">
-          <b-button tag="a" class="is-primary is-rounded " href="mailto:recaudacion@ninaspro.cl?subject=Me gustaría colaborar con Niñas Pro">
-              {{$t('home.buttonPartnersMail')}}
-          </b-button>
-          <b-button tag="nuxt-link" class="is-primary is-rounded" to="/Alliances">
-              {{$t('home.buttonPartnersAll')}}
-          </b-button>
+<!--          <b-button tag="a" class="is-primary is-rounded " href="mailto:recaudacion@ninaspro.cl?subject=Me gustaría colaborar con Niñas Pro">-->
+<!--              {{$t('home.buttonPartnersMail')}}-->
+<!--          </b-button>-->
+<!--          <b-button tag="nuxt-link" class="is-primary is-rounded" to="/Alliances">-->
+<!--              {{$t('home.buttonPartnersAll')}}-->
+<!--          </b-button>-->
         </div>
 
         <div class="left-moved">
-          <ListOfItems :data="sponsorsList.gold" :detailed="true" category="auspicio gold" type='is-warning' />
-          <ListOfItems :data="sponsorsList.silver" :detailed="false" category="auspicio silver" type='is-light' />
-          <ListOfItems :data="sponsorsList.bronze" :detailed="false" category="auspicio bronze" type='is-success' />
-          <ListOfItems :data="patreonsList" :detailed="false" category="colaboración pro" type='is-primary' />
-          <ListOfItems :data="collaboratorsList" :detailed="false" category="colaboración" type="is-info" />
+          <ListOfItems :data="contributorsList.galati" :detailed="true" category="galati" type='is-warning' />
+          <ListOfItems :data="contributorsList.bucuresti" :detailed="false" category="bucuresti" type='is-light' />
+          <ListOfItems :data="contributorsList.ploiesti" :detailed="false" category="ploiesti" type='is-success' />
+          <ListOfItems :data="contributorsList.constanta" :detailed="false" category="constanta" type='is-primary' />
         </div>
       </div>
     </section>
@@ -90,9 +89,7 @@ import ListOfItems from '~/components/ListOfItems.vue';
 import Information from '~/components/Information.vue';
 import Event from '~/components/Event.vue';
 import * as Data from '~/data/home.js';
-import * as Patreons from '~/data/patreons.js';
-import * as Sponsors from '~/data/sponsors.js';
-import * as Collaborators from '~/data/collaborators.js';
+import * as Contributors from '~/data/contributors.js';
 
 export default {
   name: "Home",
@@ -110,17 +107,13 @@ export default {
   data(){
     const lang = `${this.$i18n.locale}`
     const data=Data.default
-    const patreons = Patreons.default
-    const sponsors = Sponsors.default
-    const collaborators = Collaborators.default
+    const contributors = Contributors.default
 
 
     return{
       lang,
       data,
-      patreons,
-      sponsors,
-      collaborators
+      contributors
     }
   },
   components: {
@@ -158,16 +151,10 @@ export default {
     }
   },
   computed: {
-    patreonsList: function(){
-      return this.patreons.ro.data
-    },
 
-    sponsorsList: function(){
-      return this.sponsors.ro
-    },
 
-    collaboratorsList: function(){
-      return this.collaborators.ro.data
+    contributorsList: function(){
+      return this.contributors.ro
     }
   }
 
@@ -200,7 +187,7 @@ export default {
     padding: 2rem 0 1rem 0;
   }
 
-  #collaborators {
+  #contributors {
 
     .left-moved {
         position: relative;
@@ -217,7 +204,7 @@ export default {
 
   @media only screen and (max-device-width: 1220px) {
 
-    #collaborators {
+    #contributors {
 
       .left-moved {
         left: 0px;

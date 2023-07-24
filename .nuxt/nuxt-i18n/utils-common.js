@@ -1,10 +1,7 @@
 import { parse as cookieParse, serialize as cookieSerialize } from 'cookie'
 import JsCookie from 'js-cookie'
 
-/**
- * @typedef {import('../../types/internal').ResolvedOptions} ResolvedOptions
- * @typedef {Required<import('../../types/').DetectBrowserLanguageOptions>} DetectBrowserLanguageOptions
- */
+/** @typedef {import('../../types/internal').ResolvedOptions} ResolvedOptions */
 
 /**
  * Formats a log message, prefixing module's name to it.
@@ -188,21 +185,27 @@ export function getLocaleCookie (req, { useCookie, cookieKey, localeCodes }) {
 /**
  * @param {string} locale
  * @param {import('http').ServerResponse | undefined} res
- * @param {Pick<DetectBrowserLanguageOptions, 'useCookie' | 'cookieAge' | 'cookieDomain' | 'cookieKey' | 'cookieSecure' | 'cookieCrossOrigin'>} options
+ * @param {{ useCookie: boolean, cookieDomain: string | null, cookieKey: string, cookieSecure: boolean, cookieCrossOrigin: boolean}} options
  */
-export function setLocaleCookie (locale, res, { useCookie, cookieAge, cookieDomain, cookieKey, cookieSecure, cookieCrossOrigin }) {
+export function setLocaleCookie (locale, res, { useCookie, cookieDomain, cookieKey, cookieSecure, cookieCrossOrigin }) {
   if (!useCookie) {
     return
   }
+  const date = new Date()
+  /** @type {import('cookie').CookieSerializeOptions} */
+  const cookieOptions = {
+    expires: new Date(date.setDate(date.getDate() + 365)),
+    path: '/',
+    sameSite: cookieCrossOrigin ? 'none' : 'lax',
+    secure: cookieCrossOrigin || cookieSecure
+  }
+
+  if (cookieDomain) {
+    cookieOptions.domain = cookieDomain
+  }
+
   if (process.client) {
-    /** @type {import('js-cookie').CookieAttributes} */
-    const cookieOptions = {
-      expires: cookieAge,
-      path: '/',
-      sameSite: cookieCrossOrigin ? 'none' : 'lax',
-      secure: cookieCrossOrigin || cookieSecure,
-      ...cookieDomain ? { domain: cookieDomain } : {}
-    }
+    // @ts-ignore
     JsCookie.set(cookieKey, locale, cookieOptions)
   } else if (res) {
     let headers = res.getHeader('Set-Cookie') || []
@@ -210,19 +213,7 @@ export function setLocaleCookie (locale, res, { useCookie, cookieAge, cookieDoma
       headers = [String(headers)]
     }
 
-    /** @type {import('cookie').CookieSerializeOptions} */
-    const cookieOptions = {
-      maxAge: cookieAge * 60 * 60 * 24, // in seconds
-      path: '/',
-      sameSite: cookieCrossOrigin ? 'none' : 'lax',
-      secure: cookieCrossOrigin || cookieSecure,
-      ...cookieDomain ? { domain: cookieDomain } : {}
-    }
     const redirectCookie = cookieSerialize(cookieKey, locale, cookieOptions)
-    headers = headers.filter(header => {
-      const cookie = cookieParse(header)
-      return !(cookieKey in cookie)
-    })
     headers.push(redirectCookie)
 
     res.setHeader('Set-Cookie', headers)

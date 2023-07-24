@@ -53,7 +53,6 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 
-
 .memories-container {
     // background-color:#fdca36
     margin: 30px 0 0 0;

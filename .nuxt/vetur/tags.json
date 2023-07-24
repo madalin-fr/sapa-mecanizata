@@ -5,8 +5,8 @@
   "Carrousel": {
     "description": "Auto imported from components/Carrousel.vue"
   },
-  "Collaborators": {
-    "description": "Auto imported from components/Collaborators.vue"
+  "Contributors": {
+    "description": "Auto imported from components/Contributors.vue"
   },
   "Event": {
     "description": "Auto imported from components/Event.vue"

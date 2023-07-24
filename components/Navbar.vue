@@ -3,12 +3,12 @@
   <b-navbar :transparent="true" :type="type" wrapper-class="container ninaspro-navbar" centered>
 
     <template v-slot:brand  >
-      <b-navbar-item tag="nuxt-link" :to="{ path: '/' }">
+      <nuxt-link class="navbar-item" :to="{ path: '/' }">
         <img
-         src="@/assets/logo.png"
+         src="~/assets/logo.png"
          alt="Corporación Niñas Pro"
         />
-      </b-navbar-item>
+      </nuxt-link>
     </template>
 
     <template v-slot:start>
@@ -39,8 +39,8 @@
         <p>{{$t('navbar.events')}}</p>
       </b-navbar-item>
 
-      <b-navbar-item tag="nuxt-link" :to="{ path: '/' }" href="#collaborators" v-smooth-scroll>
-        <p>{{$t('navbar.alliances')}}</p>
+      <b-navbar-item tag="nuxt-link" :to="{ path: '/' }" href="#contributors" v-smooth-scroll>
+        <p>{{$t('navbar.portfolio')}}</p>
       </b-navbar-item>
 
       <!-- <b-navbar-item tag="a" href="https://blog.ninaspro.cl">
@@ -51,18 +51,12 @@
 
     <template v-slot:end>
       <b-navbar-dropdown :label="`${$t('navbar.lang')}`">
-        <client-only>
-        <b-navbar-item>
-          <nuxt-link :to="switchLocalePath('ro')">
+          <nuxt-link class="navbar-item" :to="switchLocalePath('ro')">
             română
           </nuxt-link>
-        </b-navbar-item>
-        <b-navbar-item>
-          <nuxt-link :to="switchLocalePath('en')">
+          <nuxt-link class="navbar-item" :to="switchLocalePath('en')">
             english
           </nuxt-link>
-        </b-navbar-item>
-        </client-only>
       </b-navbar-dropdown>
 
       <b-navbar-item tag="div">
@@ -106,55 +100,5 @@ export default {
 
 <style lang="scss" scoped>
 
-.ninaspro-navbar {
-
-  .navbar-brand {
-
-    img {
-      position: absolute;
-      max-width: 8rem;
-      max-height: 5rem;
-      height: 5rem;
-      top: 1rem;
-    }
-  }
-
-  .navbar-start {
-    margin-left: 8rem;
-
-    .condensed {
-      padding-right: 0;
-    }
-  }
-
-  .navbar-item {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 1rem 0.80rem;
-
-    #involucrate-btn {
-      margin-right: 20px;
-      border-width: 4px;
-    }
-
-    #dona-btn {
-      border-width: 4px;
-    }
-  }
-}
-
-@media only screen and (max-device-width: 1220px) {
-
-  .navbar-brand {
-
-    img {
-      position: absolute;
-      max-width: 7rem;
-      max-height: 4rem;
-      height: 4rem;
-      top: 1rem;
-    }
-  }
-}
 
 </style>

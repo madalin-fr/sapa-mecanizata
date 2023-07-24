@@ -41,7 +41,6 @@ export default {
 @import '@/assets/main.scss';
 
 
-
 .background-container {
   background-color: $success;
   color: white;

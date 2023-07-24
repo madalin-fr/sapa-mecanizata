@@ -20,6 +20,30 @@ export default {
     type() {
       return this.$store.state.type
     }
+  },
+  head() {
+    let title;
+    let description;
+    switch (this.$i18n.locale) {
+      case 'en':
+        title = 'Mechanized screed';
+        description = 'English description of the page';
+        break;
+      case 'ro':
+        title = 'Șapă mecanizată';
+        description = 'Descrierea în română a paginii';
+        break;
+    }
+    return {
+      title: title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: description
+        }
+      ]
+    }
   }
 }
 </script>

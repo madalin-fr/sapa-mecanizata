@@ -1,8 +1,9 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
+
 // Set your colors
-$primary: #6b32ed;
+$primary: #aa4500;
 $primary-invert: #ffffff;
 
 $info: #fbd1e9;
@@ -19,6 +20,9 @@ $danger-invert: #ffffff;
 
 $light: #6fd0d8;
 $light-invert: #ffffff;
+
+$navbar-item-img-max-height: 5rem;
+
 
 
 
@@ -64,10 +68,14 @@ $colors: (
 
 );
 
+
+
 // Links
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+
 
 // Import Bulma and Buefy styles
 @import "~bulma/bulma";
