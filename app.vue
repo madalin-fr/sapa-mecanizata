@@ -1,51 +1,22 @@
 <template>
   <div id="app">
     <Navbar :type="type" />
-    <nuxt />
+    <NuxtPage /> <!-- This renders the current page's content -->
     <Footer :type="type" />
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
 import Navbar from '~/components/Navbar.vue'
-
 import Footer from '~/components/Footer.vue'
+import { useGlobalStore } from '~/store/useGlobalStore' // Ensure correct path
 
-export default {
-  components: {
-    Navbar,
-    Footer
-  },
-  computed: {
-    type() {
-      return this.$store.state.type
-    }
-  },
-  head() {
-    let title;
-    let description;
-    switch (this.$i18n.locale) {
-      case 'en':
-        title = 'Mechanized screed';
-        description = 'English description of the page';
-        break;
-      case 'ro':
-        title = 'Șapă mecanizată';
-        description = 'Descrierea în română a paginii';
-        break;
-    }
-    return {
-      title: title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: description
-        }
-      ]
-    }
-  }
-}
+// Access the Pinia store
+const store = useGlobalStore()
+
+// Compute the `type` value from the store
+const type = computed(() => store.type)
 </script>
 
 <style lang="scss" scoped>
@@ -81,7 +52,5 @@ export default {
   @media only screen and (max-device-width: 1220px) {
     overflow-x: hidden;
   }
-
 }
 </style>
-

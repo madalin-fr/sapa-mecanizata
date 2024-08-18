@@ -1,6 +1,9 @@
-import AOS from 'aos'
+import AOS from "aos"
 
-const globalAOS =  AOS.init({
+import "aos/dist/aos.css"
+import { defineNuxtPlugin } from "nuxt/app";
+
+const globalAOS = AOS.init({
     // Global settings:
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
     startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -11,7 +14,6 @@ const globalAOS =  AOS.init({
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 199, // the delay on throttle used while scrolling the page (advanced)
 
-
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 120, // offset (in px) from the original trigger point
     delay: 300, // values from 0 to 3000, with step 50ms
@@ -20,14 +22,18 @@ const globalAOS =  AOS.init({
     once: true, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-center', // defines which position of the element regarding window should trigger the animation
-
 });
 
-// trigger when the Nuxt page is ready
-window.onNuxtReady(() => {
-    AOS.refresh()
-})
+// // trigger when the Nuxt page is ready
+// window.onNuxtReady(() => {
+//     AOS.refresh()
+// })
 
-export default ({ app }) => {
-    app.AOS = globalAOS
-}
+export default defineNuxtPlugin((nuxtApp) => {
+    if (typeof window !== 'undefined') {
+      nuxtApp.AOS = AOS.init({
+        once: false,
+      });
+    }
+  });
+  

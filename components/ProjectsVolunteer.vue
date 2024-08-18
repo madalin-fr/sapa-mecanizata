@@ -2,30 +2,35 @@
   <div class="container">
     <div class="card-image">
       <figure>
-        <img src="~/assets/sororidad.jpg" alt="Placeholder image">
+        <img :src="getImgUrl(image)" alt="Placeholder image">
       </figure>
     </div>
     <div class="content">
-      <p class="title"> {{title}} </p>
-      <p class="description">{{description}}</p>
+      <p class="title">{{ title }}</p>
+      <p class="description">{{ description }}</p>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    "type": String,
-    "image": String,
-    "title": String,
-    "description": String,
-  },
-  methods: {
-    getImgUrl(value) {
-        return require(`~/assets/${value}`)
-    },
-  },
-}
+<script setup>
+
+// Define props
+const props = defineProps({
+  type: String,
+  image: String,
+  title: String,
+  description: String,
+});
+
+// Method to get image URL
+const getImgUrl = (value) => {
+  try {
+    return new URL(`${value}`, import.meta.url).href;
+  } catch (error) {
+    console.error(`Image not found: ${value}`, error);
+    return '';
+  }
+};
 </script>
 
 <style scoped>
@@ -42,7 +47,7 @@ export default {
   font-size: 18px;
   margin-left: 5%;
 }
-.columns, .content{
+.columns, .content {
   text-align: center;
   padding-left: 5%;
 }

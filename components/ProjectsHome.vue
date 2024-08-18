@@ -2,51 +2,48 @@
   <div class="container">
     <div class="card-image">
       <figure>
-        <img :src="getImgUrl(image)" alt="Placeholder image">
+        <img :src="`${image}`" alt="Placeholder image">
       </figure>
     </div>
     <div class="content">
-      <p class="title"> {{title}} </p>
-      <p class="description"> {{description}} </p>
+      <p class="title">{{ title }}</p>
+      <p class="description">{{ description }}</p>
     </div>
     <div class="card-end">
-      <nuxt-link :to="path" :class="`button ${type} is-rounded`">
-        {{$t('home.readMore')}}
-      </nuxt-link>
+      <NuxtLink :to="path" :class="`button ${type} is-rounded`">
+        {{ $t('home.readMore') }}
+      </NuxtLink>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
+import { useNuxtApp } from '#app';
 
-export default {
-  data(){
-    const lang = `${this.$i18n.locale}`
+// Destructure $i18n from useNuxtApp
+const { $i18n } = useNuxtApp();
 
-    return{
-      lang
-    }
-  },
-  props: {
-    "type": String,
-    "image": String,
-    "title": String,
-    "text": String,
-    "description": String,
-    "path": String,
-  },
-  methods: {
-    getImgUrl(value) {
-        return require(`~/assets/${value}`)
-    },
-  },
-}
+const props = defineProps({
+  type: String,
+  image: String,
+  title: String,
+  description: String,
+  path: String,
+});
+
+const lang = computed(() => $i18n.locale.value);
 </script>
 
 <style lang="scss" scoped>
-
 .container {
   margin: 12px;
+
+  .card-image {
+    figure {
+      margin: 0;
+    }
+  }
 
   .content {
     padding: 5px;
@@ -57,7 +54,6 @@ export default {
       font-size: 20px;
       margin-bottom: 10px;
     }
-
   }
 
   .card-end {

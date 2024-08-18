@@ -1,0 +1,26 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "types": [ 
+     "@nuxt/types",
+      "@nuxtjs/i18n",
+    ],
+    "paths": {
+     "@/*": [
+      "./*"
+     ]
+    }
+  },
+  "include": [
+   "types/**/*.d.ts",
+    "**/*.vue",
+    "**/*.ts" // Include other TypeScript files
+, "plugins/fontawesome.js"  ]
+}

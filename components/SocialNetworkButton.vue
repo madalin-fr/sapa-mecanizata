@@ -1,6 +1,8 @@
 <template>
-<div class="block">
-    <a class="rrss-icon" target="_blank" :href="pathTw">
+   <client-only>
+  <div class="block">
+    
+   <a class="rrss-icon" target="_blank" :href="pathTw">
       <vue-fontawesome :icon="['fab', 'twitter']"/>
     </a>
     <a class="rrss-icon" target="_blank" :href="pathFb">
@@ -12,19 +14,17 @@
     <a class="rrss-icon" target="_blank" :href="pathIg">
       <vue-fontawesome :icon="['fab', 'instagram']"/>
     </a>
-</div>
+  </div></client-only>
 </template>
 
-<script>
-export default {
-  props: {
-    "type": String,
-    "pathTw": String,
-    "pathFb": String,
-    "pathIg": String,
-    "pathLi": String,
-  },
-}
+<script setup>
+const props = defineProps({
+  type: String,
+  pathTw: String,
+  pathFb: String,
+  pathIg: String,
+  pathLi: String,
+});
 </script>
 
 <style scoped>

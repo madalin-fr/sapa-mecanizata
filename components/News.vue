@@ -2,7 +2,7 @@
   <div class="container">
   <div class="card-image">
     <figure>
-      <img src="~/assets/sororidad.jpg" alt="Placeholder image">
+      <img src="/sororidad.jpg" alt="Placeholder image">
     </figure>
   </div>
   <div class="content">

@@ -1,11 +1,22 @@
-import { library, config } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import Vue from 'vue'
-import { fas, faFilePdf, faMapMarkerAlt, faCalendarAlt, faClock, faLanguage } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faTwitter, faFacebook, faInstagram, faLinkedin, fas, faFilePdf, faMapMarkerAlt, faCalendarAlt, faClock, faLanguage)
-config.autoAddCss = false
+import { defineNuxtPlugin } from 'nuxt/app';
+import { library, config } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { fab} from '@fortawesome/free-brands-svg-icons';
+import { faFilePdf, faMapMarkerAlt, faCalendarAlt, faClock, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 
-Vue.component('vue-fontawesome', FontAwesomeIcon)
+
+
+// Add icons to the library
+library.add(
+  fab,
+  fas
+);
+
+// Disable automatic CSS addition
+config.autoAddCss = false;
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.component('vue-fontawesome', FontAwesomeIcon, {})
+})

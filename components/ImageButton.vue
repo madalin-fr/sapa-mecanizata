@@ -3,35 +3,34 @@
     <figure class="image is-square">
       <nuxt-link :to="path">
         <img
-           :src="getImgUrl(image)"
-           alt="Corporación Niñas Pro"
+          :src="getImgUrl(image)"
+          alt="Corporación Niñas Pro"
         />
       </nuxt-link>
     </figure>
     <div class="np-footer">
       <nuxt-link :to="path" :class="`button ${type} is-rounded is-medium`">
-        {{text}}
+        {{ text }}
       </nuxt-link>
     </div>
   </div>
 </template>
+<script setup>
+// Define component props
+const props = defineProps({
+  type: String,
+  image: String,
+  text: String,
+  path: String
+});
 
-<script>
-export default {
-  name: "ImageButton",
-  props: {
-    "type": String,
-    "image": String,
-    "text": String,
-    "path": String,
-  },
-  methods: {
-    getImgUrl(value) {
-        return require(`~/assets/${value}`)
-    }
-  }
-}
+// Handle image URL paths
+const getImgUrl = (value) => {
+  // Assuming images are stored in the public/images folder
+  return `${value}`;
+};
 </script>
+
 
 <style lang="scss" scoped>
 .np-image-button {

@@ -5,17 +5,21 @@
         <div class="columns">
           <div class="column is-three-quarters np-banner-header">
             <h1 class="title">
-              {{title}}
+              {{ title }}
             </h1>
-            <b-button :href="link" tag="a" v-if="showButton"
-              :class="`${type} is-inverted is-rounded is-outlined`">
-              {{button}}
-            </b-button>
+            <button
+              v-if="showButton"
+              :href="link"
+              :class="`${type} is-inverted is-rounded is-outlined`"
+              class="button"
+            >
+              {{ button }}
+            </button>
           </div>
           <div class="column is-one-quarter np-banner-symbol">
             <img
-               :src="getColouredSymbolUrl(type)"
-               alt="Coloured Star"
+              :src="getColouredSymbolUrl(type)"
+              alt="Coloured Star"
             />
           </div>
         </div>
@@ -23,38 +27,31 @@
     </div>
   </div>
 </template>
+<script setup>
+import { computed } from 'vue';
 
-<script>
+// Define props
+const props = defineProps({
+  type: String,
+  title: String,
+  button: String,
+  link: String
+});
 
-export default {
-  name: "Banner",
-  props: {
-    type: String,
-    title: String,
-    button: String,
-    link: String
-  },
-  methods: {
-    getColouredSymbolUrl(type) {
-      if(type === "is-primary" || type === "is-warning")
-          return require(`~/assets/estrella-rosada.png`);
-      else
-          return require(`~/assets/estrella-amarilla.png`);
-    }
-  },
-  computed: {
-    showButton: function() {
-      if (this.link === undefined)
-        return false;
-      else
-        return true;
-    }
+// Computed property for showing button
+const showButton = computed(() => props.link !== undefined);
+
+// Function to get the colored symbol URL
+const getColouredSymbolUrl = (type) => {
+  if (type === 'is-primary' || type === 'is-warning') {
+    return 'estrella-rosada.png'; // Adjust this path as needed
+  } else {
+    return 'estrella-amarilla.png'; // Adjust this path as needed
   }
 };
 </script>
 
 <style lang="scss" scoped>
-
 .hero.is-medium .hero-body {
   padding: 6rem 5rem 2rem 5rem;
   height: 18rem;

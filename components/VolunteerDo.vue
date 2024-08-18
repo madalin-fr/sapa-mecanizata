@@ -14,37 +14,34 @@
   </div>
 </template>
 
-<script>
-import * as Data from '~/data/volunteer.js'
-export default {
-  data() {
-    const data = Data.default
-    const lang = `${this.$i18n.locale}`
-    return {
-      data,
-      lang
-    }
-  },
-  methods: {
-    getImgUrl(value) {
-      return require(`~/assets/${value}`)
-    }
-  },
-  computed: {
-    //data according to language
-    datos: function() {
-      if (this.lang == 'en') {
-        return this.data.en.doData
-      } else {
-        return this.data.ro.doData
-      }
-    }
+
+<script setup>
+import * as Data from '~/data/volunteer.js';
+import { useNuxtApp } from '#app';
+
+// Get the Nuxt app context
+const nuxtApp = useNuxtApp();
+const i18n = nuxtApp.$i18n;
+
+const data = Data.default;
+const lang = i18n.locale.value;
+
+const datos = computed(() => {
+  return lang === 'en' ? data.en.doData : data.ro.doData;
+});
+
+const getImgUrl = (value) => {
+  // Use dynamic import for images
+  try {
+    return `/${value}`;
+  } catch (error) {
+    console.error(`Image not found: ${value}`, error);
+    return '';
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-
 .title {
     font-size: 20px;
     font-weight: 600;

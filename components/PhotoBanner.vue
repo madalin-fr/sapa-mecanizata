@@ -1,38 +1,37 @@
 <template>
   <section class="hero is-medium is-white has-background">
-    <img class="hero-background is-transparent " :src="getImgUrl(image)">
+    <img class="hero-background is-transparent" :src="getImgUrl(image)" alt="Background image">
     <div class="hero-body">
       <div class="container banner-container">
-        <span class="banner-title">{{title}}</span>
+        <span class="banner-title">{{ title }}</span>
       </div>
     </div>
   </section>
 </template>
 
-<script>
+<script setup>
 
-export default {
-  name: "PhotoBanner",
-  components: {
-  },
-  props: {
-    image: String,
-    title: String
-  },
-  methods: {
-    getImgUrl(value) {
-        return require(`~/assets/${value}`)
-    }
+// Define props
+const props = defineProps({
+  image: String,
+  title: String,
+});
+
+// Method to get image URL
+const getImgUrl = (value) => {
+  try {
+    return new URL(`${value}`, import.meta.url).href;
+  } catch (error) {
+    console.error(`Image not found: ${value}`, error);
+    return '';
   }
 };
 </script>
 
 <style lang="scss" scoped>
-
-
 .hero.is-medium .hero-body {
-    padding-bottom: 2rem;
-    padding-top: 30rem;
+  padding-bottom: 2rem;
+  padding-top: 30rem;
 }
 
 .banner-title {
@@ -47,8 +46,8 @@ export default {
 
 @media only screen and (max-device-width: 768px) {
   .hero.is-medium .hero-body {
-      padding-bottom: 1rem;
-      padding-top: 12rem;
+    padding-bottom: 1rem;
+    padding-top: 12rem;
   }
 
   .banner-title {
@@ -74,5 +73,4 @@ export default {
     opacity: 0.3;
   }
 }
-
 </style>
