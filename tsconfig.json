@@ -22,5 +22,5 @@
    "types/**/*.d.ts",
     "**/*.vue",
     "**/*.ts" // Include other TypeScript files
-, "plugins/fontawesome.js"  ]
+, "plugins/fontawesome.js", "plugins/splide.client.js"  ]
 }

@@ -6,7 +6,7 @@ interface GlobalState {
 
 export const useGlobalStore = defineStore('globalStore', {
   state: (): GlobalState => ({
-    type: 'is-primary',  // Initialize with an empty string or handle dynamically
+    type: '',  // Initialize with an empty string or handle dynamically
   }),
   actions: {
     setType(newType: string) {

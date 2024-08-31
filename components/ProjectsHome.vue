@@ -1,15 +1,15 @@
 <template>
-  <div class="container">
+  <div class="project-card is-flex is-flex-direction-column">
     <div class="card-image">
-      <figure>
-        <img :src="`${image}`" alt="Placeholder image">
+      <figure class="image"> <!-- Adjust aspect ratio if necessary -->
+        <img :src="`${image}`" alt="Project image">
       </figure>
     </div>
-    <div class="content">
+    <div class="content is-flex-grow-1">
       <p class="title">{{ title }}</p>
       <p class="description">{{ description }}</p>
     </div>
-    <div class="card-end">
+    <div class="card-end ">
       <NuxtLink :to="path" :class="`button ${type} is-rounded`">
         {{ $t('home.readMore') }}
       </NuxtLink>
@@ -36,18 +36,27 @@ const lang = computed(() => $i18n.locale.value);
 </script>
 
 <style lang="scss" scoped>
-.container {
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 12px;
 
   .card-image {
     figure {
       margin: 0;
+      height: 300px; /* Set a fixed height for the image */
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
   .content {
-    padding: 5px;
-    min-height: 80px;
+    padding: 20px 20px;
+    flex-grow: 1;
     text-align: left;
 
     .title {
@@ -58,20 +67,18 @@ const lang = computed(() => $i18n.locale.value);
 
   .card-end {
     text-align: center;
+    margin-top: auto;
+    padding: 10px 0;
   }
 }
 
-@media only screen and (max-device-width: 1220px) {
-  .container {
-    margin: 40px;
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    .content {
-      min-height: 0px;
-
-      .title {
-        margin-bottom: 5px;
-      }
-    }
-  }
+.column {
+  display: flex;
+  flex-direction: column;
 }
 </style>

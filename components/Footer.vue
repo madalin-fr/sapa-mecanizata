@@ -1,55 +1,50 @@
 <template>
   <footer :class="`hero is-medium ${type}`">
-    <div class="container has-text-centered">
-      <div class="columns is-multiline">
-        <!-- Logo Column -->
-        <div class="column is-12-mobile is-2-tablet">
-          <a href="/">
-            <img class="logo" src="/logo.png" alt="Corporación Niñas Pro" width="100" height="100">
+    <div class="container is-fluid">
+      <div class="is-flex is-align-items-center is-justify-content-space-between">
+        <div class="logo-container">
+          <a :href="localizedPath('/')">
+            <img class="logo" src="/logo.png" alt="Sapa Mecanizata" width="100" height="100">
           </a>
         </div>
-
-        <!-- About Section -->
-        <div class="column is-12-mobile is-3-tablet">
-          <strong>{{$t('footer.about')}}</strong>
-          <ul>
-            <li><nuxt-link class="footer-link" to="/history">{{$t('footer.purpose')}}</nuxt-link></li>
-            <li><nuxt-link class="footer-link" to="/history">{{$t('footer.history')}}</nuxt-link></li>
-            <li><nuxt-link class="footer-link" to="/">{{$t('footer.memory')}}</nuxt-link></li>
-            <li><nuxt-link class="footer-link" to="/">{{$t('pages.conductcode')}}</nuxt-link></li>
-          </ul>
-        </div>
-
-        <!-- Help Section -->
-        <div class="column is-12-mobile is-3-tablet">
-          <strong>{{$t('footer.help')}}</strong>
-          <ul>
-            <li><nuxt-link class="footer-link" to="/">{{$t('footer.terms')}}</nuxt-link></li>
-            <li><nuxt-link class="footer-link" to="/">{{$t('footer.volunteer')}}</nuxt-link></li>
-            <li><a class="footer-link" href="https://yodono.cl/institucion/546/ninas_pro">{{$t('footer.donate')}}</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact and Social Media -->
-        <div class="column is-12-mobile is-3-tablet">
-          <div class="contactus">
-            <strong>{{$t('footer.contact')}}</strong> <br>
-            <a href="mailto:sapa-mecanizata@gmail.com">sapa-mecanizata@gmail.com</a>
+        <div class="links-container has-text-right has-text-weight-bold">
+          <div>
+            <p><a :href="localizedPath('/about')">{{ $t('footer.about') }}</a></p>
           </div>
-          <div class="rrss">
-            <strong>{{$t('footer.rrss')}}</strong>
-            <SocialNetworkButton
-              pathTw="https://twitter.com/ninasPro"
-              pathFb="https://www.facebook.com/NinasPro"
-              pathIg="https://www.instagram.com/ninas_pro/"
-              pathLi="https://www.linkedin.com/company/ninas-pro/"
-            />
+          <div>
+            <p class="footer-link"><a :href="localizedPath('/services')">{{ $t('footer.services') }}</a></p>
+          </div>
+          <div>
+            <p class="footer-link"><a :href="localizedPath('/gallery')">{{ $t('footer.gallery') }}</a></p>
           </div>
         </div>
+      </div>
+
+      <hr>
+
+      <div class="is-flex is-justify-content-space-between">
+        <p class="footer-link"><a :href="localizedPath('/contact')">{{ $t('footer.contact') }}</a></p>
+        <div class="rrss has-text-right">
+          <p class="footer-title">{{ $t('footer.rrss') }}</p>
+          <SocialNetworkButton
+            :pathFb="yourFacebookLink"
+            :pathLi="yourLinkedInLink"
+            :pathIg="yourInstagramLink"
+          />
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="content has-text-centered">
+        <p>
+          <a class="footer-link" :href="localizedPath('/privacy')">{{ $t('footer.privacy') }}</a>
+        </p>
       </div>
     </div>
   </footer>
 </template>
+
 
 <script>
 import SocialNetworkButton from '~/components/SocialNetworkButton.vue';
@@ -62,27 +57,58 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'is-primary' // Provide a default value if applicable
+      default: 'is-primary',
+    },
+    yourFacebookLink: {
+      type: String,
+      required: true,
+    },
+    yourLinkedInLink: {
+      type: String,
+      required: true,
+    },
+    yourInstagramLink: {
+      type: String,
+      required: true,
     },
   },
-}
+  computed: {
+    locale() {
+      return this.$i18n.locale;
+    },
+    defaultLocale() {
+      return this.$i18n.defaultLocale;
+    }
+  },
+  methods: {
+    localizedPath(path) {
+      // Ensure no trailing slash in the path
+      const trimmedPath = path.replace(/\/$/, '');
+      
+      // If it's the home page and not the default locale, return just the locale
+      if (trimmedPath === '' && this.locale !== this.defaultLocale) {
+        return `/${this.locale}`;
+      }
+      
+      // If locale is default, use path as is, otherwise prepend locale
+      return this.locale === this.defaultLocale
+        ? trimmedPath || '/'  // Return '/' for empty path in default locale
+        : `/${this.locale}${trimmedPath}`;
+    }
+  }
+};
 </script>
+
 
 <style lang="scss" scoped>
 footer {
-  text-align: center;
   padding-top: 20px;
-  padding-bottom: 20px;
   width: 100%;
 }
 
-strong {
-  color: white;
-}
 
-.column {
-  text-align: left;
-  width: max-content;
+p {
+  color: white;
 }
 
 .logo {
@@ -93,14 +119,46 @@ strong {
   color: white;
 }
 
-.contactus {
-  margin-bottom: 15px;
+
+
+.is-flex {
+  display: flex;
 }
 
-@media only screen and (max-device-width: 775px) {
-  .column {
-    text-align: center;
-    width: auto;
+.is-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.links-container {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px; /* Adjust as needed */
+}
+
+
+.container {
+  width: 25%;
+}
+
+@media only screen and (max-width:1200px) {
+  .container {
+  width: 40%;
   }
 }
+
+
+@media only screen and (max-width: 775px) {
+  .container {
+    width: 100%;
+  }
+
+  .links-container {
+    text-align: center;
+  }
+}
+
+
+
 </style>

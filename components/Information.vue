@@ -6,7 +6,7 @@
           data-aos="fade-right"
           data-aos-delay="100"
           data-aos-duration="1500"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="center-bottom"
         >
           <img :class="type" :src="getImgUrl(image)" />
         </div>
@@ -35,7 +35,7 @@
           data-aos="fade-left"
           data-aos-delay="100"
           data-aos-duration="1500"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="center-bottom"
         >
           <img :class="type" :src="getImgUrl(image)" />
         </div>
@@ -62,64 +62,4 @@
     return `/${value}`;
   };
   </script>
-  
-  <style lang="scss" scoped>
-  .info-div {
-    max-height: 30rem;
-    margin: 2rem 0;
-  
-    .info-text {
-      text-align: left;
-      max-height: inherit;
-      padding: 100px 50px;
-  
-      .title {
-        font-size: 30px;
-      }
-  
-      .subtitle {
-        font-size: 18px;
-      }
-    }
-  
-    .info-img {
-      max-height: inherit;
-  
-      &.right {
-        text-align: right;
-      }
-  
-      img {
-        object-fit: cover;
-        width: 100%;
-        max-height: inherit;
-        padding: 0;
-  
-        &.right {
-          border-radius: 1000px 0 0 1000px;
-        }
-  
-        &.left {
-          border-radius: 0 1000px 1000px 0;
-        }
-      }
-    }
-  }
-  
-  @media only screen and (max-device-width: 1220px) {
-    .info-div {
-      max-height: max-content;
-  
-      .info-text {
-        padding: 30px 30px;
-      }
-  
-      .info-img {
-        img {
-          width: 90%;
-        }
-      }
-    }
-  }
-  </style>
-  
+  c

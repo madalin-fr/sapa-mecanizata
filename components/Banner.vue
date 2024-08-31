@@ -7,14 +7,7 @@
             <h1 class="title">
               {{ title }}
             </h1>
-            <button
-              v-if="showButton"
-              :href="link"
-              :class="`${type} is-inverted is-rounded is-outlined`"
-              class="button"
-            >
-              {{ button }}
-            </button>
+           
           </div>
           <div class="column is-one-quarter np-banner-symbol">
             <img
@@ -44,9 +37,9 @@ const showButton = computed(() => props.link !== undefined);
 // Function to get the colored symbol URL
 const getColouredSymbolUrl = (type) => {
   if (type === 'is-primary' || type === 'is-warning') {
-    return 'estrella-rosada.png'; // Adjust this path as needed
+    return '/power-washing.png'; // Adjust this path as needed
   } else {
-    return 'estrella-amarilla.png'; // Adjust this path as needed
+    return '/estrella-amarilla.png'; // Adjust this path as needed
   }
 };
 </script>
@@ -88,7 +81,7 @@ const getColouredSymbolUrl = (type) => {
     .np-banner-symbol {
       img {
         height: 0rem;
-        visibility: hidden;
+        display:none;
       }
     }
   }

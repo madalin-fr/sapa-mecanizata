@@ -19,6 +19,8 @@ export default defineNuxtConfig({
   },
   ssr: true,
   css: [
+
+    '@splidejs/splide/css/sea-green',
     'buefy/dist/buefy.css',
     'aos/dist/aos.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
@@ -26,6 +28,7 @@ export default defineNuxtConfig({
   ],
   plugins: [
     { src: '@/plugins/aos.client.ts', mode: 'client' },
+    { src: '@/plugins/splide.client.js', mode: 'client'},
     '@/plugins/fontawesome.js',
     '@/plugins/pinia.ts',
   ],

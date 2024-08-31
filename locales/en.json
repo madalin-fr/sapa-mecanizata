@@ -1,103 +1,55 @@
 {
-  "navbar":{
-      "initiatives":"Projects",
-      "inspire":"Inspire",
-      "empower": "Empower",
-      "boost": "Boost",
-      "incentive": "Incentive",
-      "events":"Events",
-      "about":"About Us",
-      "history": "History",
-      "alliance": "alliance",
-      "involved": "Get involved",
-      "donate":"Donate",
-      "lang":"Language"
+  "navbar": {
+    "gallery": "Gallery", 
+    "services": "Services",
+    "about": "About Us",
+    "news": "News",
+    "contact": "Contact Us",
+    "lang": "Language"
   },
-  "footer":{
+  "footer": {
     "about": "About",
-    "purpose":"Mission and Vision",
-    "team":"Team",
-    "community":"Community",
-    "history":"History",
-    "memory":"Memories",
-    "project":"Initiatives",
-    "empower":"Empower",
-    "incentive":"Incentive",
-    "inspire":"Inspires",
-    "boost":"Boost",
-    "help":"How to help?",
-    "terms":"terms and conditions",
-    "volunteer":"Volunteering",
-    "donate":"Donation",
-    "contact":"Contact Us",
-    "rrss":"Follow our social networks"
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "rrss": "Follow us on social media" 
   },
-  "home":{
-    "titleProjects":"How do we do it?",
-    "subtitleProjects":"Get to know our main projects",
-    "titleEvents":"Upcoming events",
-    "subtitleEvents":"All of our events are free, check the requirements and sign up!",
-    "titleMetrics":"Some Numbers",
-    "titlePartners": "Our Partners",
-    "subtitlePartners":"We express our sincere gratitude to the companies, institutions, and organizations that rely on our mechanized screed services. Your trust enables us to continuously improve our services and reach more clients each year.",
-    "buttonPartnersMail": "I want to support!",
-    "buttonPartnersAll": "See the complete list",
-    "titleNews":"News",
-    "seeAll":"See All",
-    "readMore":"Read More",
-    "newsletter":"Subscribe to the newsletter"
+  "home": {
+    "heroTitle": "Sapa Mecanizata: Precision Screeding for Superior Floors", 
+    "heroSubtitle": "Level Up Your Construction with Our Mechanized Screed Services", 
+    "heroButton": "Get a Free Quote",
+    "advantageTitle": "The Sapa Mecanizata Advantage", 
+    "advantageSubtitle": "Our Process",
+    "efficiencyTitle": "Efficiency",
+    "efficiencyDescription": "Mechanized screeding saves time and labor compared to traditional methods.",
+    "precisionTitle": "Precision",
+    "precisionDescription": "Achieve accuracy and levelness with our advanced equipment.",
+    "versatilityTitle": "Versatility",
+    "versatilityDescription": "We handle various projects and concrete mixes.",
+    "expertiseTitle": "Expertise",
+    "expertiseDescription": "Our experienced team ensures skilled operation of the screed.",
+    "testimonialsTitle": "What Our Clients Say", 
+    "statisticsTitle": "Key Statistics",
+    "projectsCompleted": "Projects Completed",
+    "squareMetersScreed": "Square Meters Screed",
+    "yearsOfExperience": "Years of Experience",
+    "partnersTitle": "Our Suppliers", 
+    "partnersSubtitle": "Brands We Trust",
+    "newsTitle": "News",
+    "seeAll": "See All",
+    "readMore": "Read More",
+    "newsletter": "Subscribe to the newsletter"
   },
-  "event":
-  {
-    "noEvents":"No Upcoming Events",
-    "signUp":"Apply",
-    "soon":"Soon",
-    "seeAll":"See All",
-    "completed":"Registration Closed"
+  "event": { 
+    "noEvents": "No Upcoming Events",
+    "signUp": "Apply",
+    "soon": "Soon",
+    "seeAll": "See All",
+    "completed": "Registration Closed"
   },
-  "volunteer":{
-    "help":"Get Involved",
-    "titleIntro":"Volunteering",
-    "subtitleIntro":"All our activities are possible through volunteering and our alliances support. You can create a positive change too, giving a percentage of your time to empower girls and young women and to inspire scientific and technological vocations.",
-    "invitationIntro":"See how you can join to the team.",
-    "titleDo":"What do the volunteers do?",
-    "subtitleDo":"The volunteers are the core of Niñas Pro",
-    "titleProfile":"Volunteers Profile",
-    "subtitleProfile":"Check out what our volunteers have in common.",
-    "titleInternships":"Internships",
-    "subtitleInternships":"Look the internship opportunities in Niñas Pro",
-    "titleAlliances":"Alliances and Corporative Volunteering",
-    "subtitleAlliances":"If you represent a company, we can work together",
-    "titleTestimony":"Testimonies",
-    "subtitleTestimony":"Look what our volunteers are saying about the experience",
-    "titleSignup":"Join the team!",
-    "subtitleSignup":"Complete the form to init the proccess."
-  },
-  "inspire":{
-    "banner":"Competitive Programming",
-    "title":"¿En qué consiste la iniciativa inspira?",
-    "titleTeam":"Team",
-    "titlenovelties":"Novelties"
-  },
-  "incentive":{
-    "banner":"Inspiring Activities",
-    "title":"¿En qué consiste la iniciativa incentiva?",
-    "titleTeam":"Team",
-    "titlenovelties":"Novelties"
-  },
-  "boost":{
-    "banner":"Arduino Quest",
-    "title":"¿En qué consiste la iniciativa potencia?",
-    "titleTeam":"Team",
-    "titlenovelties":"Novelties"
-  },
-  "empower":{
-    "banner":"Annual Programming Workshop",
-    "title":"¿En qué consiste la iniciativa empodera?",
-    "titleTeam":"Team",
-    "titlenovelties":"Novelties"
-  },
-  "pages":{
-      "conductcode":"Code of Conduct"
+  "pages": {
+    "conductcode": "Code of Conduct",
+    "gallery": "Gallery"
   }
 }

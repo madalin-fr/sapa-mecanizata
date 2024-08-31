@@ -7,17 +7,23 @@
 
     <!-- Projects -->
     <ClientOnly>
-    <section id="projects">
-      <div class="container" data-aos="fade-up">
-        <h1 class="title">{{ $t('home.titleProjects') }}</h1>
-        <p class="subtitle">{{ $t('home.subtitleProjects') }}</p>
-        <div class="columns is-variable is-1">
-          <div v-for="(project, i) in datosFunc('projects')" :key="i" data-aos="fade-up" :data-aos-delay="300 + 100*i">
-            <ProjectsHome :title="project.title" :type="project.type" :image="project.image" :path="project.path" :description="project.description" />
+      <section id="projects">
+        <div class="container" data-aos="fade-up">
+          <h1 class="title">{{ $t('home.titleProjects') }}</h1>
+          <p class="subtitle">{{ $t('home.subtitleProjects') }}</p>
+          <div class="columns is-variable is-1">
+            <div v-for="(project, i) in datosFunc('projects')" :key="i" data-aos="fade-up" :data-aos-delay="300 + 100*i">
+              <ProjectsHome 
+                :title="project.title" 
+                :type="project.type" 
+                :image="project.image" 
+                :path="project.path" 
+                :description="project.description" 
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </ClientOnly>
 
      <!-- Information -->
@@ -101,7 +107,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watchEffect, onUpdated } from 'vue';
 import { useNuxtApp } from '#app';
 import { useGlobalStore } from '~/store/useGlobalStore';  // Adjust path as necessary
 import AOS from 'aos';
@@ -114,6 +120,7 @@ import Information from '~/components/Information.vue';
 import Event from '~/components/Event.vue';
 import * as Data from '~/data/home.js';
 import * as Contributors from '~/data/contributors.js';
+import { useRoute } from 'nuxt/app';
 
 const nuxtApp = useNuxtApp();
 const i18n = nuxtApp.$i18n;
@@ -125,8 +132,16 @@ const contributors = Contributors.default;
 const lang = computed(() => i18n.locale.value);
 const contributorsList = computed(() => contributors.ro);
 
-// Ensure that type is available in the store
-const type = ref('is-primary'); // Set a default value
+// Define props
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'is-primary',
+  },
+});
+
+// Reactive reference for type, initially set to prop value
+const type = ref(props.type);
 
 // Function to retrieve data based on section and language
 const datosFunc = (section) => {
@@ -153,12 +168,19 @@ const datosFunc = (section) => {
 // Initialize type from store, if available
 onMounted(() => {
   AOS.init();
-  if (store.type !== undefined) {
+  if (store.type !== '') {
     type.value = store.type;
   } else {
-    store.setType(type.value);
+    store.setType(props.type);
   }
 });
+
+onUpdated(() => {
+  store.setType(props.type);
+  type.value = store.type;
+});
+
+
 
 </script>
 

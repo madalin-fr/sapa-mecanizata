@@ -113,7 +113,7 @@ export default ({
         projectsHome: [
             {
                 'title': 'Activități Inspirante',
-                'type': 'is-warning',
+                'type': 'is-danger',
                 'image': 'ninastic.jpg',
                 'path': '/incentiva/',
                 'description': 'Prelegeri susținute de Mujeres Pro și ateliere introductive la noi tehnologii pentru a motiva învățarea.'
@@ -124,20 +124,6 @@ export default ({
                 'image': 'laschicaspueden.jpg',
                 'path': '/empodera/',
                 'description': 'Curs de programare în Python sau C++ pentru dezvoltarea unor noi abilități.'
-            },
-            {
-                'title': 'Programare Competitivă',
-                'type': 'is-info',
-                'image': 'lamarr.jpg',
-                'path': '/inspira/',
-                'description': 'Cursuri și mentorat pentru pregătirea participării la Competițiile Școlare de Programare.'
-            },
-            {
-                'title': 'Arduino Quest',
-                'type': 'is-success',
-                'image': 'rosalind.jpeg',
-                'path': '/potencia/',
-                'description': 'Provocare realizată împreună cu Institutul Mileniu Fundamentele Datelor pentru dezvoltarea de proiecte cu Arduino.'
             }
         ],
         information: [

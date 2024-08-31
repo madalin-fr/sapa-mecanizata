@@ -14,7 +14,8 @@
     <a class="rrss-icon" target="_blank" :href="pathIg">
       <vue-fontawesome :icon="['fab', 'instagram']"/>
     </a>
-  </div></client-only>
+  </div>
+  </client-only>
 </template>
 
 <script setup>

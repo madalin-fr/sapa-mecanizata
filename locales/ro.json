@@ -1,103 +1,55 @@
 {
     "navbar": {
-        "initiatives": "Proiecte",
-        "inspire": "Inspira",
-        "empower": "Împuternicire",
-        "boost": "Potența",
-        "incentive": "Incentivează",
-        "events": "Evenimente",
-        "about": "Despre noi",
-        "history": "Istorie",
-        "alliance": "Alianțe",
-        "portfolio": "Portofoliu",
-        "news": "Știri",
-        "involved": "Implicare",
-        "donate": "Donează",
-        "lang": "Limba"
+      "gallery": "Galerie",
+      "services": "Servicii",
+      "about": "Despre Noi",
+      "news": "Știri",
+      "contact": "Contact",
+      "lang": "Limbă"
     },
     "footer": {
-        "about": "Despre noi",
-        "purpose": "Misiune și Viziune",
-        "team": "Echipă",
-        "history": "Istorie",
-        "memory": "Amintiri",
-        "project": "Proiecte",
-        "empower": "Împuternicire",
-        "incentive": "Incentivează",
-        "inspire": "Inspira",
-        "boost": "Potențează",
-        "help": "sapa-mecanizata.ro",
-        "terms": "termeni si conditii",
-        "volunteer": "Voluntariat",
-        "donate": "Donare",
-        "contact": "Contactează-ne",
-        "rrss": "Urmărește-ne pe rețelele sociale"
+      "about": "Despre",
+      "services": "Servicii",
+      "gallery": "Galerie",
+      "contact": "Contact",
+      "privacy": "Politică de Confidențialitate",
+      "rrss": "Urmărește-ne pe rețelele sociale"
     },
     "home": {
-        "titleProjects": "Cum facem asta?",
-        "subtitleProjects": "Descoperă principalele noastre proiecte",
-        "titleEvents": "Evenimente viitoare",
-        "subtitleEvents": "Toate evenimentele noastre sunt gratuite, verifică cerințele și înscrie-te!",
-        "titleMetrics": "Măsurători de impact",
-        "titlePartners": "Parteneriatele noastre",
-        "subtitlePartners": "Ne exprimăm sincerele mulțumiri către companiile, instituțiile și organizațiile care se bazează pe serviciile noastre de șapă mecanizată. Încrederea voastră ne permite să îmbunătățim continuu serviciile noastre și să ajungem la mai mulți clienți în fiecare an.",
-        "buttonPartnersMail": "Vreau să devin partener",
-        "buttonPartnersAll": "Vezi lista completă",
-        "titleNews": "Știri",
-        "seeAll": "Vezi toate",
-        "readMore": "Află mai multe",
-        "newsletter": "Abonează-te la newsletter"
+      "heroTitle": "Sapa Mecanizată: Nivelare Precisă pentru Pardoseli Superioare",
+      "heroSubtitle": "Îmbunătățiți-vă Construcția cu Serviciile Noastre de Sapare Mecanizată",
+      "heroButton": "Obțineți o Oferă de Preț Gratuită",
+      "advantageTitle": "Avantajele Sapa Mecanizată",
+      "advantageSubtitle": "Procesul Nostru",
+      "efficiencyTitle": "Eficiență",
+      "efficiencyDescription": "Saparea mecanizată economisește timp și forță de muncă în comparație cu metodele tradiționale.",
+      "precisionTitle": "Precizie",
+      "precisionDescription": "Obțineți precizie și nivelare cu echipamentele noastre avansate.",
+      "versatilityTitle": "Versatilitate",
+      "versatilityDescription": "Ne ocupăm de diverse proiecte și amestecuri de beton.",
+      "expertiseTitle": "Expertiză",
+      "expertiseDescription": "Echipa noastră experimentată asigură operarea calificată a sapelei mecanizate.",
+      "testimonialsTitle": "Ce Spun Clienții Noștri",
+      "statisticsTitle": "Statistici Cheie",
+      "projectsCompleted": "Proiecte Finalizate",
+      "squareMetersScreed": "Metri Pătrați Sapați",
+      "yearsOfExperience": "Ani de Experiență",
+      "partnersTitle": "Furnizorii Noștri",
+      "partnersSubtitle": "Mărci în Care Avem Încredere",
+      "newsTitle": "Știri",
+      "seeAll": "Vezi Tot",
+      "readMore": "Citește Mai Mult",
+      "newsletter": "Abonează-te la newsletter"
     },
     "event": {
-        "noEvents": "Nu sunt evenimente viitoare",
-        "signUp": "Înscrie-mă",
-        "soon": "În curând",
-        "seeAll": "Vezi toate",
-        "completed": "Înscrierile s-au închis"
-    },
-    "volunteer": {
-        "help": "Voluntariat",
-        "titleIntro": "Voluntariat",
-        "subtitleIntro": "Toate activitățile noastre sunt posibile datorită voluntarilor și parteneriatelor strategice. Tu poți fi, de asemenea, parte a schimbării donând un procent din timpul tău pentru a împuternici fetele și adolescente și a inspira vocații științifice și tehnologice.",
-        "invitationIntro": "Te invităm să afli cum poți deveni parte a echipei.",
-        "titleDo": "Ce face voluntariatul?",
-        "subtitleDo": "Voluntarii sunt motorul Niñas Pro",
-        "titleProfile": "Profilul voluntarilor",
-        "subtitleProfile": "Caracteristicile care ne unesc și ne definesc sunt",
-        "titleInternships": "Stagii de practică",
-        "subtitleInternships": "Află cum poți face practica ta la Niñas Pro",
-        "titleAlliances": "Alianțe și voluntariat corporativ",
-        "subtitleAlliances": "Dacă reprezinți o companie, vezi cum putem începe să lucrăm împreună",
-        "titleTestimony": "Mărturii",
-        "subtitleTestimony": "Aceasta este părerea celor care au participat la voluntariat",
-        "titleSignup": "Vreau să mă implic!",
-        "subtitleSignup": "Completează formularul pentru a începe procesul"
-    },
-    "inspire": {
-        "banner": "Programare Competitivă",
-        "title": "Ce presupune inițiativa Inspira?",
-        "titleTeam": "Echipă",
-        "titlenovelties": "Proiecte"
-    },
-    "incentive": {
-        "banner": "Activități Inspirante",
-        "title": "Ce presupune inițiativa Incentivează?",
-        "titleTeam": "Echipă",
-        "titlenovelties": "Proiecte"
-    },
-    "boost": {
-        "banner": "Arduino Quest",
-        "title": "Ce presupune inițiativa Potența?",
-        "titleTeam": "Echipă",
-        "titlenovelties": "Proiecte"
-    },
-    "empower": {
-        "banner": "Curs Anual de Programare",
-        "title": "Ce presupune inițiativa Împuternicire?",
-        "titleTeam": "Echipă",
-        "titlenovelties": "Proiecte"
+      "noEvents": "Nu Există Evenimente Viitoare",
+      "signUp": "Aplică",
+      "soon": "În Curând",
+      "seeAll": "Vezi Tot",
+      "completed": "Înscrierea S-a Încheiat"
     },
     "pages": {
-        "conductcode": "Codul de conduită"
+      "conductcode": "Codul de Conduită",
+      "gallery": "Galerie"
     }
-}
+  }

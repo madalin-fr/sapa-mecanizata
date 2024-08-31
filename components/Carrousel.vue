@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-  <b-carousel :pause-hover="false" :pause-info="false" :interval="2000">
+  <b-carousel :pause-hover="false" :pause-info="false" :interval="3500">
     <b-carousel-item v-for="(carousel, i) in datos" :key="i">
       <section :class="`hero is-medium full-size ${type}`">
         <div class="hero-body">
@@ -78,6 +78,11 @@ const datos = computed(() => {
 button {
   font-size: 20px;
   border-width: 4px;
+}
+
+
+.container {
+  height:400px;
 }
 
 @media only screen and (max-device-width: 1220px) {
