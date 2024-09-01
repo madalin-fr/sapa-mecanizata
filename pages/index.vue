@@ -5,20 +5,21 @@
      <!-- Iniciativas -->
 
 
-    <!-- Projects -->
+    <!-- services -->
     <ClientOnly>
-      <section id="projects">
+      <section id="services">
         <div class="container" data-aos="fade-up">
-          <h1 class="title">{{ $t('home.titleProjects') }}</h1>
-          <p class="subtitle">{{ $t('home.subtitleProjects') }}</p>
+          <h1 class="title">{{ $t('home.titleservices') }}</h1>
+          <p class="subtitle">{{ $t('home.subtitleservices') }}</p>
           <div class="columns is-variable is-1">
-            <div v-for="(project, i) in datosFunc('projects')" :key="i" data-aos="fade-up" :data-aos-delay="300 + 100*i">
-              <ProjectsHome 
+            <div v-for="(project, i) in datosFunc('services')" :key="i" data-aos="fade-up" :data-aos-delay="300 + 100*i">
+              <servicesHome 
                 :title="project.title" 
                 :type="project.type" 
                 :image="project.image" 
                 :path="project.path" 
                 :description="project.description" 
+                :description2="project.description2"
               />
             </div>
           </div>
@@ -38,13 +39,13 @@
 
     
     <!-- Eventos -->
-    <section id="events">
+    <!-- <section id="events">
       <div class="container">
         <h1 class="title">{{ $t('home.titleEvents') }}</h1>
         <p class="subtitle">{{ $t('home.subtitleEvents') }}</p>
         <Event :isCondensed="true" />
       </div>
-    </section>
+    </section> -->
 
     <!-- Numbers -->
     <section id="metrics" class="hero is-primary">
@@ -114,7 +115,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Carrousel from '~/components/Carrousel.vue';
-import ProjectsHome from '~/components/ProjectsHome.vue';
+import servicesHome from '~/components/servicesHome.vue';
 import ListOfItems from '~/components/ListOfItems.vue';
 import Information from '~/components/Information.vue';
 import Event from '~/components/Event.vue';
@@ -146,16 +147,16 @@ const type = ref(props.type);
 // Function to retrieve data based on section and language
 const datosFunc = (section) => {
   if (lang.value === 'en') {
-    if (section === 'projects') {
-      return data.en.projectsHome;
+    if (section === 'services') {
+      return data.en.servicesHome;
     } else if (section === 'information') {
       return data.en.information;
     } else if (section === 'metrics') {
       return data.en.metrics;
     }
   } else {
-    if (section === 'projects') {
-      return data.ro.projectsHome;
+    if (section === 'services') {
+      return data.ro.servicesHome;
     } else if (section === 'information') {
       return data.ro.information;
     } else if (section === 'metrics') {

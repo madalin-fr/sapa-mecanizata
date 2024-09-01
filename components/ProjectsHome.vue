@@ -8,6 +8,8 @@
     <div class="content is-flex-grow-1">
       <p class="title">{{ title }}</p>
       <p class="description">{{ description }}</p>
+
+      <p class="description2">{{ description2 }}</p>
     </div>
     <div class="card-end ">
       <NuxtLink :to="path" :class="`button ${type} is-rounded`">
@@ -29,6 +31,7 @@ const props = defineProps({
   image: String,
   title: String,
   description: String,
+  description2: String,
   path: String,
 });
 

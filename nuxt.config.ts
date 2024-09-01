@@ -1,5 +1,4 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import type { NuxtConfig } from '@nuxt/types'
+import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   app: {
@@ -19,8 +18,8 @@ export default defineNuxtConfig({
   },
   ssr: true,
   css: [
-
     '@splidejs/splide/css/sea-green',
+    '@mdi/font/css/materialdesignicons.css',
     'buefy/dist/buefy.css',
     'aos/dist/aos.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
@@ -28,7 +27,7 @@ export default defineNuxtConfig({
   ],
   plugins: [
     { src: '@/plugins/aos.client.ts', mode: 'client' },
-    { src: '@/plugins/splide.client.js', mode: 'client'},
+    { src: '@/plugins/splide.client.js', mode: 'client' },
     '@/plugins/fontawesome.js',
     '@/plugins/pinia.ts',
   ],
@@ -43,15 +42,20 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'en',
-        iso: 'en-US',
+        language: 'en-US', // Updated to language
         file: 'en.json',
       },
       {
         code: 'ro',
-        iso: 'ro-RO',
+        language: 'ro-RO', // Updated to language
         file: 'ro.json',
       },
     ],
+  },
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
+    }
   },
 
   compatibilityDate: '2024-08-12',

@@ -1,18 +1,18 @@
 <template>
-  <b-navbar :transparent="true" :type="type" wrapper-class="container sapa-mecanizata-navbar" centered>
+  <b-navbar :type="type" wrapper-class="container sapa-mecanizata-navbar" centered spaced>
     <template v-slot:brand>
       <nuxt-link class="navbar-item" :to="logoPath">
         <img class="logo" src="/logo.png" alt="Sapa Mecanizata" />
       </nuxt-link>
     </template>
     <template v-slot:start>
-      <b-navbar-item tag="nuxt-link" :to="localizedPath('/gallery')">
+      <b-navbar-item tag="a" :href="localizedPath('/gallery')">
         <p>{{ $t('navbar.gallery') }}</p>
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" :to="localizedPath('/services')">
-        <p>{{ $t('navbar.services') }}</p>
+      <b-navbar-item tag="a" role="button" @click="scrollToContributors">
+        {{ $t('navbar.services') }}
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" :to="localizedPath('/about')">
+      <b-navbar-item tag="a" :href="localizedPath('/about')">
         <p>{{ $t('navbar.about') }}</p>
       </b-navbar-item>
     </template>
@@ -22,19 +22,17 @@
         <nuxt-link class="navbar-item" :to="switchLocalePath('en')">english</nuxt-link>
       </b-navbar-dropdown>
       <b-navbar-item tag="div">
-        <div class="buttons">
-          <nuxt-link :to="localizedPath('/contact')">
-            <b-button
-              id="contact-btn"
-              :class="{
-                'is-info': type !== 'is-info',
-                'is-warning': type === 'is-info'
-              }"
-              rounded
-            >
-              {{ $t('navbar.contact') }}
-            </b-button>
-          </nuxt-link>
+        <div class="contact-info">
+          <p class="address">
+            <b-icon icon="map-marker"></b-icon>
+            Strada Domnească 66, Galați 800008
+          </p>
+          <p class="phone">
+            <a href="tel:+40721512121">
+              <b-icon icon="phone"></b-icon>
+              +40721512121
+            </a>
+          </p>
         </div>
       </b-navbar-item>
     </template>
@@ -63,18 +61,20 @@ export default {
   },
   methods: {
     localizedPath(path) {
-      // Ensure no trailing slash in the path
       const trimmedPath = path.replace(/\/$/, '');
-      
-      // If it's the home page and not the default locale, return just the locale
       if (trimmedPath === '' && this.locale !== this.defaultLocale) {
         return `/${this.locale}`;
       }
-      
-      // If locale is default, use path as is, otherwise prepend locale
-      return this.locale === this.defaultLocale
-        ? trimmedPath || '/'  // Return '/' for empty path in default locale
-        : `/${this.locale}${trimmedPath}`;
+      return this.locale === this.defaultLocale ? trimmedPath || '/' : `/${this.locale}${trimmedPath}`;
+    },
+    scrollToContributors() {
+      const contributorsSection = document.getElementById('contributors');
+      if (contributorsSection) {
+        contributorsSection.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }
     }
   }
 };
@@ -83,7 +83,30 @@ export default {
 <style lang="scss" scoped>
 .logo {
   height: auto !important;
-  max-height: none; /* Reset any max-height applied by external styles */
-  width: 100px; /* Ensure the width is set */ 
+  max-height: none;
+  width: 100px;
+}
+
+.contact-info {
+  text-align: right;
+
+  .address, .phone {
+    margin: 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+  }
+
+  .address {
+    font-weight: bold;
+  }
+
+  .phone a {
+    color: #462d2d;
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+  }
 }
 </style>

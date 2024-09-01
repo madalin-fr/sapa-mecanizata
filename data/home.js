@@ -10,15 +10,13 @@ export default ({
                 'type': 'nuxt-link'
             },
             {
-                'title': 'Volunteering',
-                'subtitle': 'We empower girls through teaching them to code and inspiring them to explore scientific and technological areas.',
-                'image': 'banner/banner-img-2.png',
-                'action': 'Get involved in volunteering',
-                'link': '/volunteer',
-                'type': 'nuxt-link'
-            }
+                "title": "Valued Partners",
+                "subtitle": "Explore the leading organizations that trust us for their premium flooring and high-traction access solutions.",
+                "image": "banner/banner-img-2.png",
+                "action": "Meet Our Partners"
+              }
         ],
-        projectsHome:[
+        servicesHome:[
             {
                 'title':'Inspiring Activities',
                 'type':'is-info',
@@ -45,7 +43,7 @@ export default ({
                 'type':'is-success',
                 'image':'rosalind.jpeg',
                 'path':'/potencia/',
-                'description':'Challenge carried out together with the Millennium Institute Fundational Research on Data to develop projects with Arduino.'
+                'description':'Challenge carried out together with the Millennium Institute Fundational Research on Data to develop services with Arduino.'
             },
         ],
         information:[
@@ -102,28 +100,27 @@ export default ({
                 'type': 'nuxt-link'
             },
             {
-                'title': 'Voluntariat în Niñas Pro',
-                'subtitle': 'Împuternicim fetele și adolescente prin învățarea programării și inspirăm vocații științifice și tehnologice. Tu poți ajuta, de asemenea, făcând voluntariat.',
-                'image': 'banner/banner-img-2.png',
-                'action': 'Aplică!',
-                'link': '/volunteer',
-                'type': 'nuxt-link'
-            }
+                "title": "Partenerii Noștri de Încredere",
+                "subtitle": "Află cum organizațiile de renume au beneficiat de expertiza noastră în pardoseli și rampe de acces antiderapante de top.",
+                "image": "banner/banner-img-2.png",
+                "action": "Vezi Partenerii Noștri"
+              }
         ],
-        projectsHome: [
+        servicesHome: [
             {
                 'title': 'Activități Inspirante',
                 'type': 'is-danger',
                 'image': 'ninastic.jpg',
                 'path': '/incentiva/',
-                'description': 'Prelegeri susținute de Mujeres Pro și ateliere introductive la noi tehnologii pentru a motiva învățarea.'
+                'description': 'Executăm rampe din beton finisate manual, special concepute pentru a asigura un acces optim și sigur în parcări și garaje.',
+                'description2': 'Fiecare rampă este realizată cu atenție la detalii și respectă cele mai înalte standarde de calitate, oferind un finisaj estetic și durabil. Procesele noastre de fabricație asigură o rezistență maximă și o adaptare perfectă la nevoile specifice ale fiecărei locații. Indiferent de complexitatea proiectului, ne angajăm să livrăm soluții care combină funcționalitatea cu eleganța, contribuind astfel la îmbunătățirea accesibilității și a aspectului general al spațiilor de parcaj.'
             },
             {
                 'title': 'Curs Anual de Programare',
                 'type': 'is-primary',
                 'image': 'laschicaspueden.jpg',
                 'path': '/empodera/',
-                'description': 'Curs de programare în Python sau C++ pentru dezvoltarea unor noi abilități.'
+                'description': 'Executăm rampe din beton finisate manual, special concepute pentru a asigura un acces optim și sigur în parcări și garaje. Fiecare rampă este realizată cu atenție la detalii și respectă cele mai înalte standarde de calitate, oferind un finisaj estetic și durabil. Procesele noastre de fabricație asigură o rezistență maximă și o adaptare perfectă la nevoile specifice ale fiecărei locații. Indiferent de complexitatea proiectului, ne angajăm să livrăm soluții care combină funcționalitatea cu eleganța, contribuind astfel la îmbunătățirea accesibilității și a aspectului general al spațiilor de parcaj.'
             }
         ],
         information: [

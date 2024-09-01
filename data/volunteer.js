@@ -41,7 +41,7 @@ export default ({
                 ]
             }
         ],
-        projects: [
+        services: [
             {'title':'Proyecto 1', 'type':'is-danger', 'text':'Postula', 'path':'/UndCons/'},
             {'title':'Proyecto 2', 'type':'is-danger', 'text':'Postula', 'path':'/UndCons/'},
             {'title':'Proyecto 3', 'type':'is-danger', 'text':'Postula', 'path':'/UndCons/'},
@@ -109,7 +109,7 @@ export default ({
                 ]
             }
         ],
-        projects: [
+        services: [
             {'title':'Proyecto 1', 'type':'is-danger', 'text':'Postula', 'path':'/UndCons/'},
             {'title':'Proyecto 2', 'type':'is-danger', 'text':'Postula', 'path':'/UndCons/'},
             {'title':'Proyecto 3', 'type':'is-danger', 'text':'Postula', 'path':'/UndCons/'},

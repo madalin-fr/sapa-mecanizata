@@ -26,12 +26,12 @@
     "precisionTitle": "Precision",
     "precisionDescription": "Achieve accuracy and levelness with our advanced equipment.",
     "versatilityTitle": "Versatility",
-    "versatilityDescription": "We handle various projects and concrete mixes.",
+    "versatilityDescription": "We handle various services and concrete mixes.",
     "expertiseTitle": "Expertise",
     "expertiseDescription": "Our experienced team ensures skilled operation of the screed.",
     "testimonialsTitle": "What Our Clients Say", 
     "statisticsTitle": "Key Statistics",
-    "projectsCompleted": "Projects Completed",
+    "servicesCompleted": "services Completed",
     "squareMetersScreed": "Square Meters Screed",
     "yearsOfExperience": "Years of Experience",
     "partnersTitle": "Our Suppliers", 
@@ -51,5 +51,9 @@
   "pages": {
     "conductcode": "Code of Conduct",
     "gallery": "Gallery"
+  },
+  "gallery": {
+      "accessRamps": "Ramps",
+      "flooring": "Screed"
   }
 }

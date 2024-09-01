@@ -20,6 +20,9 @@ const type = computed(() => store.type)
 </script>
 
 <style lang="scss" scoped>
+
+
+
 #app {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
