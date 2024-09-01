@@ -115,7 +115,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Carrousel from '~/components/Carrousel.vue';
-import servicesHome from '~/components/servicesHome.vue';
+import servicesHome from '~/components/ServicesHome.vue';
 import ListOfItems from '~/components/ListOfItems.vue';
 import Information from '~/components/Information.vue';
 import Event from '~/components/Event.vue';
