@@ -77,12 +77,12 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue';
-import { useNuxtApp } from '#app';
 import { useGlobalStore } from '~/store/useGlobalStore';
 import PhotoBanner from "~/components/PhotoBanner.vue";
 import Banner from '~/components/Banner.vue';
 import { generateRampSlides, generateFlooringSlides } from '~/utils/useGalleryImages';
 
+// Use global store
 const store = useGlobalStore();
 
 const props = defineProps({
@@ -130,7 +130,7 @@ const thumbsFlooring = ref(null);
 
 onMounted(async () => {
   await nextTick();
-  
+
   // Initialize Access Ramps gallery
   if (mainRamps.value && thumbsRamps.value) {
     const mainRampsSplide = mainRamps.value.splide;
@@ -149,13 +149,11 @@ onMounted(async () => {
     }
   }
 
-  if (store.type !== '') {
-    type.value = store.type;
-  } else {
-    store.setType(props.type);
-  }
+  // Match color on all elements
+  store.setType(props.type);
 });
 </script>
+
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
 

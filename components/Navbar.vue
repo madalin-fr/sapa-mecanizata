@@ -6,9 +6,9 @@
       </nuxt-link>
     </template>
     <template v-slot:start>
-      <b-navbar-item tag="a" :href="localizedPath('/gallery')">
-        <p>{{ $t('navbar.gallery') }}</p>
-      </b-navbar-item>
+      <nuxt-link :to="localePath('/gallery')" class="navbar-item">
+        {{ $t('navbar.gallery') }}
+      </nuxt-link>
       <b-navbar-item tag="a" role="button" @click="scrollToContributors">
         {{ $t('navbar.services') }}
       </b-navbar-item>
@@ -102,11 +102,13 @@ export default {
   }
 
   .phone a {
-    color: #462d2d;
+    color: #71ca95;
   }
 
   .icon {
     margin-right: 0.5rem;
   }
+
+
 }
 </style>

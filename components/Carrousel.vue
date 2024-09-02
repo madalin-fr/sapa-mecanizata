@@ -102,7 +102,7 @@ const scrollToContributors = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px; // Fixed height for desktop and larger screens
+  height: 75vh; // Fixed height for desktop and larger screens
 }
 
 .hero-body {
@@ -126,26 +126,6 @@ const scrollToContributors = () => {
   height: 100%; // Ensure columns fill the full height
 }
 
-.banner-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  height: 100%; // Make sure banner-text fills the height
-  text-align: left; // Align text to the left by default
-  
-  .title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-  
-  .subtitle {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    margin-bottom: 1.5rem;
-  }
-}
-
 button, a.button {
   font-size: clamp(0.875rem, 2vw, 1.25rem);
   padding: 0.5em 1em;
@@ -156,7 +136,6 @@ button, a.button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
   height: 100%; // Ensure banner-image fills the height
   
   img {
@@ -168,12 +147,12 @@ button, a.button {
 
 @media screen and (max-width: 768px) {
   .carousel-container {
-    height: 500px; // Fixed height for mobile screens
+    height: 82vh; // Fixed height for mobile screens
   }
 
   .hero {
     padding: 1.5rem 1rem;
-    height: 500px; // Fixed height for mobile screens
+    height: 80vh; // Fixed height for mobile screens
   }
 
   .columns {
@@ -191,10 +170,9 @@ button, a.button {
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding-top: 0.5rem; // Adjust padding for mobile
 
     img {
-      max-width: 70%; // Slightly reduce image size on mobile for better fit
+      max-width: 60%; // Slightly reduce image size on mobile for better fit
     }
   }
 }

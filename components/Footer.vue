@@ -15,7 +15,7 @@
             <p class="footer-link"><a :href="localizedPath('/services')">{{ $t('footer.services') }}</a></p>
           </div>
           <div>
-            <p class="footer-link"><a :href="localizedPath('/gallery')">{{ $t('footer.gallery') }}</a></p>
+            <p class="footer-link"><nuxt-link :to="localePath('/gallery')"> {{ $t('footer.gallery') }}</nuxt-link></p>
           </div>
         </div>
       </div>
